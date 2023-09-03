@@ -29,14 +29,14 @@ export  const  Converter = (props) =>{
           switch (fromVal) {
             case 'USD': 
               console.log(toValue);
-              changeFromValue(toValue/USDConvert);
+              changeFromValue((toValue/USDConvert).toFixed(2));
               break;
             case 'RUB':  
               changeFromValue(toValue);
               break;
             case 'EUR': 
               console.log(toValue);
-              changeFromValue(toValue/EURConvert);
+              changeFromValue((toValue/EURConvert).toFixed(2));
               break;
             default:
               break;
@@ -55,7 +55,7 @@ export  const  Converter = (props) =>{
               var valueConvert =   USDConvert/EURConvert;  
               var finalValue = toValue*valueConvert;
 
-              changeFromValue(finalValue);
+              changeFromValue(finalValue.toFixed(2));
               break;
             default:
               break;
